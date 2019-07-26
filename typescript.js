@@ -39,3 +39,26 @@ var fightRobotArmy2 = function (robots) {
 };
 var dog = {};
 dog.count;
+// Function
+var fightRobotArmy3 = function (robots) {
+    console.log("FIGHT!");
+};
+var fightRobotArmy4 = function (robots) {
+    console.log("FIGHT!");
+    return 5;
+};
+// Classes
+var Animal = /** @class */ (function () {
+    function Animal(sound) {
+        this.sing = "lalalala";
+        this.sing = sound;
+    }
+    Animal.prototype.greet = function () {
+        return "Hello " + this.sing;
+    };
+    return Animal;
+}());
+var lion = new Animal("RRaaaaaawr");
+lion.sing;
+// Union
+var confused = "hello";
