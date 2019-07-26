@@ -33,7 +33,7 @@ let error = (): string => {
 interface RobotArmy {
   count: number;
   type: string;
-  magic: string;
+  magic?: string;
 }
 // type same with interface
 // type RobotArmy2 = {
@@ -45,6 +45,7 @@ interface RobotArmy {
 let fightRobotArmy = (robots: RobotArmy) => {
   console.log("FIGHT!");
 };
+fightRobotArmy({ count: 1, type: "dragon" });
 let fightRobotArmy2 = (robots: {
   count: number;
   type: string;
@@ -52,3 +53,13 @@ let fightRobotArmy2 = (robots: {
 }) => {
   console.log("FIGHT!");
 };
+
+// Type Assertion
+interface CatArmy {
+  count: number;
+  type: string;
+  magic: string;
+}
+
+let dog = {} as CatArmy;
+dog.count;
